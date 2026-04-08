@@ -1,0 +1,78 @@
+.heropage{
+    background-image: url(hello.png);
+
+    height: 100vh;
+    background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        width: 100%;
+}
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding: 20px 60px;
+
+    display: flex;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.logo {
+    color: gold;
+    font-size: 26px;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logo:hover {
+    color: #fff;
+}
+
+
+.dropdown {
+    position: absolute;
+    top: 80px;
+    left: 60px;
+
+    list-style: none;
+    background: rgba(0, 0, 0, 0.95);
+
+    padding: 20px 0;
+    width: 220px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    display: none;
+}
+
+
+.dropdown li {
+    padding: 12px 25px;
+}
+
+.dropdown a {
+    text-decoration: none;
+    color: #d4c9a3;
+    font-size: 18px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.dropdown a:hover {
+    color: gold;
+}
+.dropdown.show {
+    display: block;
+}
