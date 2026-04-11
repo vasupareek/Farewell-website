@@ -1,9 +1,7 @@
-// ===================== LOADING SCREEN =====================
-
 (function() {
     document.body.classList.add('loading');
 
-    // Spawn floating particles
+
     const particleContainer = document.getElementById('loaderParticles');
     if (particleContainer) {
         for (let i = 0; i < 30; i++) {
@@ -19,14 +17,14 @@
         }
     }
 
-    // Progress animation
+
     const loaderBar = document.getElementById('loaderBar');
     const loaderPercent = document.getElementById('loaderPercent');
     const ringProgress = document.querySelector('.loader-ring-progress');
     const overlay = document.getElementById('loaderOverlay');
 
-    const totalDuration = 3000; // 3 seconds
-    const circumference = 2 * Math.PI * 90; // r=90
+    const totalDuration = 3000;
+    const circumference = 2 * Math.PI * 90;
     let startTime = null;
 
     function easeOutQuart(t) {
@@ -49,12 +47,12 @@
         if (rawProgress < 1) {
             requestAnimationFrame(animateLoader);
         } else {
-            // Loading complete — fade out
+
             setTimeout(() => {
                 if (overlay) overlay.classList.add('fade-out');
                 document.body.classList.remove('loading');
 
-                // Remove overlay from DOM after transition
+
                 setTimeout(() => {
                     if (overlay) overlay.remove();
                 }, 900);
@@ -64,8 +62,6 @@
 
     requestAnimationFrame(animateLoader);
 })();
-
-// ===================== END LOADING SCREEN =====================
 
 const sections = document.querySelectorAll('.heropage, #videos, #characters, #about');
 

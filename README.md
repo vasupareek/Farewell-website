@@ -1,2 +1,1 @@
-# Farewell-website
-Tripod
+
